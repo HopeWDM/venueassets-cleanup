@@ -1,6 +1,16 @@
 #!/bin/bash
 
 
+function doCleanup() {
+
+  # remove all standalone files - doesn't remove folders
+  rm ./*
+
+  # remove everything (that's left) that doesn't follow the proper dating/naming format
+  rm -r `ls -1tr ./ | grep -v -e ^[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]_`
+
+}
+
 # move into working directory - Worship Center
 cd /Users/production/ownCloud/Venues/Worship-Center/
 
@@ -18,14 +28,3 @@ cd /Users/production/ownCloud/Venues/Room_130-TheWell/
 
 doCleanup
 
-
-
-function doCleanup() {
-
-  # remove all standalone files - doesn't remove folders
-  rm ./*
-
-  # remove everything (that's left) that doesn't follow the proper dating/naming format
-  rm -r `ls -1tr ./ | grep -v -e ^[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]_`
-
-}
