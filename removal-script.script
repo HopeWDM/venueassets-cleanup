@@ -10,10 +10,10 @@ function doCleanup() {
   # two versions; one for Linux, one for Mac OS X.
   
   # Linux Bash version (tested on CentOS 7)
-  # find ./ ! -regex '^\.\/\|^\.\/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]_.*' -exec rm -r {} \+
+  # find ./ ! -regex '^\.\/\|^\.\/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]_.*' -exec rm -rf {} \+
   
   # Mac OS X Bash version (tested on 10.10.5)
-  # find . ! -regex '^\.' -and ! -regex '^\.\/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]_.*' -exec rm -r {} \+
+  # find . ! -regex '^\.' -and ! -regex '^\.\/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]_.*' -exec rm -rf {} \+
 
 }
 
